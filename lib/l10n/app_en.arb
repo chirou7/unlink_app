@@ -59,5 +59,40 @@
     }
   },
   "enterEmail": "Please enter your email",
-  "continueAction": "Continue"
+  "continueAction": "Continue",
+  "welcomeBack": "Welcome back! Please enter your account",
+  "createAccount": "Welcome! Please enter your account",
+  "emailHint": "Email",
+  "nextStep": "Next",
+  "termsPrefix": "Registering means you accept ",
+  "termsOfService": "Terms of Service",
+  "andText": " and ",
+  "privacyPolicy": "Privacy Policy",
+  "period": ".",
+  "orders": "Orders",
+  "inUse": "{used} / {total} In use",
+  "@inUse": {
+    "placeholders": {
+      "used": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "devices": "Devices",
+  "activated": "{active} / {total} Active",
+  "@activated": {
+    "placeholders": {
+      "active": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "settings": "Settings",
+  "about": "About"
 }

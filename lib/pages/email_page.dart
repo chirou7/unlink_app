@@ -1,6 +1,6 @@
-﻿import 'package:flutter/material.dart';
+﻿import 'package:flutter/gestures.dart';
+import 'package:flutter/material.dart';
 import '../utils/app_colors.dart';
-import '../widgets/common_app_bar.dart';
 import '../l10n/app_localizations.dart';
 import 'home_page.dart';
 
@@ -38,7 +38,7 @@ class _EmailPageState extends State<EmailPage> {
     });
   }
 
-  void _onContinue() {
+  void _onNextStep() {
     if (_isEmailValid) {
       // 模拟登录/注册成功，直接跳转首页，并清空导航栈
       Navigator.pushAndRemoveUntil(
@@ -56,33 +56,33 @@ class _EmailPageState extends State<EmailPage> {
 
     return Scaffold(
       backgroundColor: AppColors.backgroundWhite,
-      appBar: CommonAppBar(
-        title: isLogin ? l10n.login : l10n.register,
+      appBar: AppBar(
         backgroundColor: AppColors.backgroundWhite,
+        elevation: 0,
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios_new,
+            color: AppColors.textPrimary,
+            size: 22,
+          ),
+          onPressed: () => Navigator.pop(context),
+        ),
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 32.0),
+          padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 24.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                isLogin ? l10n.login : l10n.register,
+                isLogin ? l10n.welcomeBack : l10n.createAccount,
                 style: const TextStyle(
-                  fontSize: 28,
+                  fontSize: 24,
                   fontWeight: FontWeight.bold,
                   color: AppColors.textPrimary,
                 ),
               ),
-              const SizedBox(height: 8),
-              Text(
-                l10n.enterEmail,
-                style: const TextStyle(
-                  fontSize: 15,
-                  color: AppColors.textTertiary,
-                ),
-              ),
-              const SizedBox(height: 40),
+              const SizedBox(height: 32),
               TextField(
                 controller: _emailController,
                 keyboardType: TextInputType.emailAddress,
@@ -90,44 +90,90 @@ class _EmailPageState extends State<EmailPage> {
                   fontSize: 16,
                   color: AppColors.textPrimary,
                 ),
+                cursorColor: AppColors.primaryYellow,
                 decoration: InputDecoration(
-                  hintText: 'example@email.com',
-                  hintStyle: const TextStyle(color: AppColors.textHint),
+                  hintText: l10n.emailHint,
+                  hintStyle: const TextStyle(
+                    color: AppColors.textHint,
+                    fontSize: 16,
+                  ),
                   filled: true,
                   fillColor: AppColors.backgroundLight,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(16),
-                    borderSide: BorderSide.none,
-                  ),
                   contentPadding: const EdgeInsets.symmetric(
                     horizontal: 16,
-                    vertical: 18,
+                    vertical: 16,
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: const BorderSide(
+                      color: AppColors.primaryYellow,
+                      width: 1.0,
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: const BorderSide(
+                      color: AppColors.primaryYellow,
+                      width: 1.5,
+                    ),
                   ),
                 ),
               ),
               const Spacer(),
               SizedBox(
                 width: double.infinity,
-                height: 56,
+                height: 52,
                 child: ElevatedButton(
-                  onPressed: _isEmailValid ? _onContinue : null,
+                  onPressed: _isEmailValid ? _onNextStep : null,
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.primaryYellow,
-                    disabledBackgroundColor: AppColors.dividerLight,
+                    disabledBackgroundColor: AppColors.primaryYellowLighter,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(999),
                     ),
                     elevation: 0,
                   ),
                   child: Text(
-                    l10n.continueAction,
+                    l10n.nextStep,
                     style: TextStyle(
                       color: _isEmailValid
                           ? AppColors.textPrimary
                           : AppColors.textHint,
                       fontWeight: FontWeight.w600,
-                      fontSize: 17,
+                      fontSize: 16,
                     ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 24),
+              Center(
+                child: RichText(
+                  text: TextSpan(
+                    text: l10n.termsPrefix,
+                    style: const TextStyle(
+                      fontSize: 12,
+                      color: AppColors.textTertiary,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: l10n.termsOfService,
+                        style: const TextStyle(color: AppColors.infoBlue),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            // TODO: 导航到服务条款页面
+                          },
+                      ),
+                      TextSpan(text: l10n.andText),
+                      TextSpan(
+                        text: l10n.privacyPolicy,
+                        style: const TextStyle(color: AppColors.infoBlue),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            // TODO: 导航到隐私政策页面
+                          },
+                      ),
+                      TextSpan(text: l10n.period),
+                    ],
                   ),
                 ),
               ),

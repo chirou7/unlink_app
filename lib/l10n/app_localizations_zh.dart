@@ -83,4 +83,53 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get continueAction => '继续';
+
+  @override
+  String get welcomeBack => '欢迎回来！请输入你的账号';
+
+  @override
+  String get createAccount => '欢迎！请输入你的账号';
+
+  @override
+  String get emailHint => '邮箱';
+
+  @override
+  String get nextStep => '下一步';
+
+  @override
+  String get termsPrefix => '注册即表示你接受';
+
+  @override
+  String get termsOfService => '服务条款';
+
+  @override
+  String get andText => '和';
+
+  @override
+  String get privacyPolicy => '隐私政策';
+
+  @override
+  String get period => '。';
+
+  @override
+  String get orders => '订单';
+
+  @override
+  String inUse(int used, int total) {
+    return '$used / $total 使用中';
+  }
+
+  @override
+  String get devices => '设备';
+
+  @override
+  String activated(int active, int total) {
+    return '$active / $total 激活';
+  }
+
+  @override
+  String get settings => '设置';
+
+  @override
+  String get about => '关于';
 }

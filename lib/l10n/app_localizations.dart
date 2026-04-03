@@ -226,6 +226,96 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Continue'**
   String get continueAction;
+
+  /// No description provided for @welcomeBack.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome back! Please enter your account'**
+  String get welcomeBack;
+
+  /// No description provided for @createAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome! Please enter your account'**
+  String get createAccount;
+
+  /// No description provided for @emailHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get emailHint;
+
+  /// No description provided for @nextStep.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get nextStep;
+
+  /// No description provided for @termsPrefix.
+  ///
+  /// In en, this message translates to:
+  /// **'Registering means you accept '**
+  String get termsPrefix;
+
+  /// No description provided for @termsOfService.
+  ///
+  /// In en, this message translates to:
+  /// **'Terms of Service'**
+  String get termsOfService;
+
+  /// No description provided for @andText.
+  ///
+  /// In en, this message translates to:
+  /// **' and '**
+  String get andText;
+
+  /// No description provided for @privacyPolicy.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy Policy'**
+  String get privacyPolicy;
+
+  /// No description provided for @period.
+  ///
+  /// In en, this message translates to:
+  /// **'.'**
+  String get period;
+
+  /// No description provided for @orders.
+  ///
+  /// In en, this message translates to:
+  /// **'Orders'**
+  String get orders;
+
+  /// No description provided for @inUse.
+  ///
+  /// In en, this message translates to:
+  /// **'{used} / {total} In use'**
+  String inUse(int used, int total);
+
+  /// No description provided for @devices.
+  ///
+  /// In en, this message translates to:
+  /// **'Devices'**
+  String get devices;
+
+  /// No description provided for @activated.
+  ///
+  /// In en, this message translates to:
+  /// **'{active} / {total} Active'**
+  String activated(int active, int total);
+
+  /// No description provided for @settings.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get settings;
+
+  /// No description provided for @about.
+  ///
+  /// In en, this message translates to:
+  /// **'About'**
+  String get about;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

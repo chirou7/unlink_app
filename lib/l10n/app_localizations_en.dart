@@ -83,4 +83,53 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get continueAction => 'Continue';
+
+  @override
+  String get welcomeBack => 'Welcome back! Please enter your account';
+
+  @override
+  String get createAccount => 'Welcome! Please enter your account';
+
+  @override
+  String get emailHint => 'Email';
+
+  @override
+  String get nextStep => 'Next';
+
+  @override
+  String get termsPrefix => 'Registering means you accept ';
+
+  @override
+  String get termsOfService => 'Terms of Service';
+
+  @override
+  String get andText => ' and ';
+
+  @override
+  String get privacyPolicy => 'Privacy Policy';
+
+  @override
+  String get period => '.';
+
+  @override
+  String get orders => 'Orders';
+
+  @override
+  String inUse(int used, int total) {
+    return '$used / $total In use';
+  }
+
+  @override
+  String get devices => 'Devices';
+
+  @override
+  String activated(int active, int total) {
+    return '$active / $total Active';
+  }
+
+  @override
+  String get settings => 'Settings';
+
+  @override
+  String get about => 'About';
 }

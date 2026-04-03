@@ -59,5 +59,40 @@
     }
   },
   "enterEmail": "请输入您的邮箱",
-  "continueAction": "继续"
+  "continueAction": "继续",
+  "welcomeBack": "欢迎回来！请输入你的账号",
+  "createAccount": "欢迎！请输入你的账号",
+  "emailHint": "邮箱",
+  "nextStep": "下一步",
+  "termsPrefix": "注册即表示你接受",
+  "termsOfService": "服务条款",
+  "andText": "和",
+  "privacyPolicy": "隐私政策",
+  "period": "。",
+  "orders": "订单",
+  "inUse": "{used} / {total} 使用中",
+  "@inUse": {
+    "placeholders": {
+      "used": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "devices": "设备",
+  "activated": "{active} / {total} 激活",
+  "@activated": {
+    "placeholders": {
+      "active": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "settings": "设置",
+  "about": "关于"
 }
