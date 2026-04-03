@@ -1,0 +1,63 @@
+{
+  "@@locale": "zh",
+  "appTitle": "Unlink App",
+  "greeting": "你好！ {name}",
+  "@greeting": {
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "李杰"
+      }
+    }
+  },
+  "newDayStarted": "新的一天已开始",
+  "myDevices": "我的设备",
+  "deviceCount": "共{count}台设备",
+  "@deviceCount": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "noDeviceYet": "还没有设备",
+  "addDevice": "添加",
+  "register": "注册",
+  "login": "登录",
+  "deviceInfo": "设备信息",
+  "petInfo": "宠物信息",
+  "deviceShare": "设备分享",
+  "alertSettings": "报警设置",
+  "otherSettings": "其他设置",
+  "helpAndFeedback": "帮助与反馈",
+  "unbind": "解绑",
+  "modelLabel": "型号: {model}",
+  "@modelLabel": {
+    "placeholders": {
+      "model": {
+        "type": "String",
+        "example": "PT02E"
+      }
+    }
+  },
+  "copied": "{label} 已复制",
+  "@copied": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "subscriptionPlan": "免费 - 随货导入-首年套餐",
+  "expireTime": "到期时间 {date}",
+  "@expireTime": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "enterEmail": "请输入您的邮箱",
+  "continueAction": "继续"
+}

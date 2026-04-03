@@ -1,0 +1,63 @@
+{
+  "@@locale": "en",
+  "appTitle": "Unlink App",
+  "greeting": "Hello! {name}",
+  "@greeting": {
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "Li Jie"
+      }
+    }
+  },
+  "newDayStarted": "A new day has started",
+  "myDevices": "My Devices",
+  "deviceCount": "{count} device(s) in total",
+  "@deviceCount": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "noDeviceYet": "No device yet",
+  "addDevice": "Add",
+  "register": "Register",
+  "login": "Login",
+  "deviceInfo": "Device Info",
+  "petInfo": "Pet Info",
+  "deviceShare": "Device Share",
+  "alertSettings": "Alert Settings",
+  "otherSettings": "Other Settings",
+  "helpAndFeedback": "Help & Feedback",
+  "unbind": "Unbind",
+  "modelLabel": "Model: {model}",
+  "@modelLabel": {
+    "placeholders": {
+      "model": {
+        "type": "String",
+        "example": "PT02E"
+      }
+    }
+  },
+  "copied": "{label} copied",
+  "@copied": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "subscriptionPlan": "Free - First Year Plan",
+  "expireTime": "Expires on {date}",
+  "@expireTime": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "enterEmail": "Please enter your email",
+  "continueAction": "Continue"
+}
