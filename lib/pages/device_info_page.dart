@@ -148,8 +148,7 @@ class DeviceInfoPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) =>
-                                HelpFeedbackPage(device: device),
+                            builder: (context) => const HelpFeedbackPage(),
                           ),
                         );
                       },

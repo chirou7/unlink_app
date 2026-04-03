@@ -114,9 +114,9 @@ class _HomePageState extends State<HomePage> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
-                              '�ҵ��豸',
-                              style: TextStyle(
+                            Text(
+                              AppLocalizations.of(context)!.myDevices,
+                              style: const TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                                 color: Color(0xFF111111),
@@ -124,7 +124,9 @@ class _HomePageState extends State<HomePage> {
                             ),
                             const SizedBox(height: 3),
                             Text(
-                              '��${devices.length}̨�豸',
+                              AppLocalizations.of(
+                                context,
+                              )!.deviceCount(devices.length),
                               style: const TextStyle(
                                 fontSize: 13,
                                 color: Color(0xFF888888),
@@ -463,14 +465,14 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.fromLTRB(24, 36, 24, 32),
         child: Column(
           children: [
-            // ����ͷͼ���ͼ������
+            // 摄像头图标插图升级版
             SizedBox(
               height: 140,
               child: Stack(
                 alignment: Alignment.center,
                 clipBehavior: Clip.none,
                 children: [
-                  // �ײ���ɫ��ԲͶӰ
+                  // 底部灰色椭圆投影
                   Positioned(
                     bottom: 0,
                     child: Container(
@@ -484,14 +486,14 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
-                  // ������ͼ����������ݵ����
+                  // 包含主图标和悬浮气泡的组合
                   Positioned(
                     bottom: 24,
                     child: Stack(
                       clipBehavior: Clip.none,
                       alignment: Alignment.center,
                       children: [
-                        // ��������
+                        // 左侧大泡泡
                         Positioned(
                           left: -24,
                           top: 12,
@@ -506,7 +508,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        // ���������
+                        // 左侧中泡泡
                         Positioned(
                           left: -12,
                           top: 24,
@@ -521,7 +523,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        // ����С����
+                        // 左上小泡泡
                         Positioned(
                           left: -2,
                           top: -8,
@@ -536,7 +538,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        // ������С����
+                        // 顶部极小泡泡
                         Positioned(
                           left: 20,
                           top: -24,
@@ -551,7 +553,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        // ����С����
+                        // 右上小泡泡
                         Positioned(
                           right: 20,
                           top: -12,
@@ -566,7 +568,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        // �Ҳ�������
+                        // 右侧中泡泡
                         Positioned(
                           right: -16,
                           top: 8,
@@ -581,7 +583,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        // �Ҳ༫С����
+                        // 右侧极小泡泡
                         Positioned(
                           right: -24,
                           top: 32,
@@ -596,7 +598,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        // ������ͼ��
+                        // 中心主图标
                         Container(
                           width: 90,
                           height: 90,
@@ -654,9 +656,9 @@ class _HomePageState extends State<HomePage> {
                   ),
                   elevation: 0,
                 ),
-                child: const Text(
-                  '����',
-                  style: TextStyle(
+                child: Text(
+                  AppLocalizations.of(context)!.addDevice,
+                  style: const TextStyle(
                     color: Color(0xFF111111),
                     fontWeight: FontWeight.bold,
                     fontSize: 16,

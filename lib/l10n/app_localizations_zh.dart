@@ -132,4 +132,142 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get about => '关于';
+
+  @override
+  String get scanningNearbyDevices => '扫描附近设备..';
+
+  @override
+  String get bringPhoneClose => '请将手机靠近设备';
+
+  @override
+  String get keepDevicePoweredOn => '保持设备开机并充满电';
+
+  @override
+  String get addManually => '手动添加';
+
+  @override
+  String get scanToAdd => '扫码添加';
+
+  @override
+  String get alertsTab => '告警';
+
+  @override
+  String get messagesTab => '消息';
+
+  @override
+  String get noAlerts => '暂无报警';
+
+  @override
+  String get noAlertsDesc => '目前没有报警通知';
+
+  @override
+  String get noMessages => '暂无消息';
+
+  @override
+  String get noMessagesDesc => '目前没有消息通知';
+
+  @override
+  String get unitSettings => '单位设置';
+
+  @override
+  String get tempUnit => '温度单位';
+
+  @override
+  String get mapSelection => '地图';
+
+  @override
+  String get language => '语言';
+
+  @override
+  String get logout => '退出登录';
+
+  @override
+  String get deleteAccount => '删除账号';
+
+  @override
+  String get cancel => '取消';
+
+  @override
+  String get googleMap => '谷歌地图';
+
+  @override
+  String get baiduMap => '百度地图';
+
+  @override
+  String get celsius => '摄氏度 ℃';
+
+  @override
+  String get fahrenheit => '华氏度 ℉';
+
+  @override
+  String get noDeviceBound => '未绑定设备';
+
+  @override
+  String get faq => '常见问题';
+
+  @override
+  String get faqRegister => '如何注册账号？';
+
+  @override
+  String get faqResetPwd => '如何重置密码？';
+
+  @override
+  String get faqGeofence => '电子围栏管理';
+
+  @override
+  String get faqBindDevice => '如何绑定设备？';
+
+  @override
+  String get faqShareDevice => '分享设备给家人';
+
+  @override
+  String get faqUnbindDevice => '如何解绑设备？';
+
+  @override
+  String get faqOrders => 'View Purchased Orders';
+
+  @override
+  String get faqAlertSettings => '告警设置';
+
+  @override
+  String get faqDeviceSettings => '设备设置';
+
+  @override
+  String get feedbackButton => '反馈';
+
+  @override
+  String get serviceStatus => '服务状态';
+
+  @override
+  String get statusAll => '全部状态';
+
+  @override
+  String get statusPending => '待处理';
+
+  @override
+  String get statusProcessing => '处理中';
+
+  @override
+  String get statusCompleted => '已完成';
+
+  @override
+  String get noData => '暂无数据';
+
+  @override
+  String get feedbackDescHint => '请详细描述问题，以便我们更好地为您提供帮助。';
+
+  @override
+  String get submit => '提交';
+
+  @override
+  String get termsOfUse => '使用条款';
+
+  @override
+  String get appVersion => '版本';
+
+  @override
+  String get findImeiSnHint => '你可以在盒子背面或设备上找到IMEI/SN';
+
+  @override
+  String get enterImeiSn => '输入IMEI/SN';
 }

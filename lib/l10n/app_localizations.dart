@@ -316,6 +316,282 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'About'**
   String get about;
+
+  /// No description provided for @scanningNearbyDevices.
+  ///
+  /// In en, this message translates to:
+  /// **'Scanning nearby devices..'**
+  String get scanningNearbyDevices;
+
+  /// No description provided for @bringPhoneClose.
+  ///
+  /// In en, this message translates to:
+  /// **'Please bring your phone close to the device'**
+  String get bringPhoneClose;
+
+  /// No description provided for @keepDevicePoweredOn.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep the device powered on and fully charged'**
+  String get keepDevicePoweredOn;
+
+  /// No description provided for @addManually.
+  ///
+  /// In en, this message translates to:
+  /// **'Add manually'**
+  String get addManually;
+
+  /// No description provided for @scanToAdd.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan code to add'**
+  String get scanToAdd;
+
+  /// No description provided for @alertsTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Alerts'**
+  String get alertsTab;
+
+  /// No description provided for @messagesTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Messages'**
+  String get messagesTab;
+
+  /// No description provided for @noAlerts.
+  ///
+  /// In en, this message translates to:
+  /// **'No Alerts'**
+  String get noAlerts;
+
+  /// No description provided for @noAlertsDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'There are currently no alert notifications'**
+  String get noAlertsDesc;
+
+  /// No description provided for @noMessages.
+  ///
+  /// In en, this message translates to:
+  /// **'No Messages'**
+  String get noMessages;
+
+  /// No description provided for @noMessagesDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'There are currently no message notifications'**
+  String get noMessagesDesc;
+
+  /// No description provided for @unitSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Unit Settings'**
+  String get unitSettings;
+
+  /// No description provided for @tempUnit.
+  ///
+  /// In en, this message translates to:
+  /// **'Temperature Unit'**
+  String get tempUnit;
+
+  /// No description provided for @mapSelection.
+  ///
+  /// In en, this message translates to:
+  /// **'Map'**
+  String get mapSelection;
+
+  /// No description provided for @language.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get language;
+
+  /// No description provided for @logout.
+  ///
+  /// In en, this message translates to:
+  /// **'Log out'**
+  String get logout;
+
+  /// No description provided for @deleteAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Account'**
+  String get deleteAccount;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @googleMap.
+  ///
+  /// In en, this message translates to:
+  /// **'Google Maps'**
+  String get googleMap;
+
+  /// No description provided for @baiduMap.
+  ///
+  /// In en, this message translates to:
+  /// **'Baidu Map'**
+  String get baiduMap;
+
+  /// No description provided for @celsius.
+  ///
+  /// In en, this message translates to:
+  /// **'Celsius ℃'**
+  String get celsius;
+
+  /// No description provided for @fahrenheit.
+  ///
+  /// In en, this message translates to:
+  /// **'Fahrenheit ℉'**
+  String get fahrenheit;
+
+  /// No description provided for @noDeviceBound.
+  ///
+  /// In en, this message translates to:
+  /// **'No device bound'**
+  String get noDeviceBound;
+
+  /// No description provided for @faq.
+  ///
+  /// In en, this message translates to:
+  /// **'FAQ'**
+  String get faq;
+
+  /// No description provided for @faqRegister.
+  ///
+  /// In en, this message translates to:
+  /// **'How to register an account?'**
+  String get faqRegister;
+
+  /// No description provided for @faqResetPwd.
+  ///
+  /// In en, this message translates to:
+  /// **'How to reset password?'**
+  String get faqResetPwd;
+
+  /// No description provided for @faqGeofence.
+  ///
+  /// In en, this message translates to:
+  /// **'Geofence management'**
+  String get faqGeofence;
+
+  /// No description provided for @faqBindDevice.
+  ///
+  /// In en, this message translates to:
+  /// **'How to bind a device?'**
+  String get faqBindDevice;
+
+  /// No description provided for @faqShareDevice.
+  ///
+  /// In en, this message translates to:
+  /// **'Share device with family'**
+  String get faqShareDevice;
+
+  /// No description provided for @faqUnbindDevice.
+  ///
+  /// In en, this message translates to:
+  /// **'How to unbind a device?'**
+  String get faqUnbindDevice;
+
+  /// No description provided for @faqOrders.
+  ///
+  /// In en, this message translates to:
+  /// **'View Purchased Orders'**
+  String get faqOrders;
+
+  /// No description provided for @faqAlertSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Alert settings'**
+  String get faqAlertSettings;
+
+  /// No description provided for @faqDeviceSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Device settings'**
+  String get faqDeviceSettings;
+
+  /// No description provided for @feedbackButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Feedback'**
+  String get feedbackButton;
+
+  /// No description provided for @serviceStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Service Status'**
+  String get serviceStatus;
+
+  /// No description provided for @statusAll.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get statusAll;
+
+  /// No description provided for @statusPending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending'**
+  String get statusPending;
+
+  /// No description provided for @statusProcessing.
+  ///
+  /// In en, this message translates to:
+  /// **'Processing'**
+  String get statusProcessing;
+
+  /// No description provided for @statusCompleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Completed'**
+  String get statusCompleted;
+
+  /// No description provided for @noData.
+  ///
+  /// In en, this message translates to:
+  /// **'No Data'**
+  String get noData;
+
+  /// No description provided for @feedbackDescHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Please describe the issue in detail so we can better assist you.'**
+  String get feedbackDescHint;
+
+  /// No description provided for @submit.
+  ///
+  /// In en, this message translates to:
+  /// **'Submit'**
+  String get submit;
+
+  /// No description provided for @termsOfUse.
+  ///
+  /// In en, this message translates to:
+  /// **'Terms of Use'**
+  String get termsOfUse;
+
+  /// No description provided for @appVersion.
+  ///
+  /// In en, this message translates to:
+  /// **'Version'**
+  String get appVersion;
+
+  /// No description provided for @findImeiSnHint.
+  ///
+  /// In en, this message translates to:
+  /// **'You can find the IMEI/SN on the back of the box or on the device'**
+  String get findImeiSnHint;
+
+  /// No description provided for @enterImeiSn.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter IMEI/SN'**
+  String get enterImeiSn;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
