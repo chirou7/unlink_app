@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../models/device_model.dart';
+import '../l10n/app_localizations.dart';
 import 'device_detail_page.dart';
 import 'find_pet_page.dart';
 import 'health_page.dart';
-import 'pet_detail_page.dart';
+import 'pet_empty_page.dart';
 
 class DeviceMainPage extends StatefulWidget {
   final DeviceModel device;
@@ -22,20 +23,18 @@ class DeviceMainPage extends StatefulWidget {
 
 class _DeviceMainPageState extends State<DeviceMainPage> {
   late int _currentIndex;
-  late List<Widget> _pages;
+
+  List<Widget> get _pages => [
+    DeviceDetailPage(device: widget.device),
+    FindPetPage(device: widget.device),
+    HealthPage(device: widget.device),
+    const PetEmptyPage(hasPet: false), // 根据上下文，添加设备跳过后这里默认应为无宠物状态
+  ];
 
   @override
   void initState() {
     super.initState();
     _currentIndex = widget.initialIndex;
-    // ʹ�� IndexedStack ���ָ�ҳ��״̬
-    _pages = [
-      DeviceDetailPage(device: widget.device),
-      FindPetPage(device: widget.device),
-      HealthPage(device: widget.device),
-      // ��ʱֱ��ʹ�� PetDetailPage���������ʵҵ����Ը����豸�Ƿ��г���ѡ����� PetEmptyPage
-      PetDetailPage(device: widget.device),
-    ];
   }
 
   @override
@@ -60,50 +59,50 @@ class _DeviceMainPageState extends State<DeviceMainPage> {
           selectedFontSize: 12,
           unselectedFontSize: 12,
           elevation: 0,
-          items: const [
+          items: [
             BottomNavigationBarItem(
-              icon: Padding(
+              icon: const Padding(
                 padding: EdgeInsets.only(bottom: 4),
                 child: Icon(Icons.location_on_outlined),
               ),
-              activeIcon: Padding(
+              activeIcon: const Padding(
                 padding: EdgeInsets.only(bottom: 4),
                 child: Icon(Icons.location_on),
               ),
-              label: '��ҳ',
+              label: AppLocalizations.of(context)!.homeTab,
             ),
             BottomNavigationBarItem(
-              icon: Padding(
+              icon: const Padding(
                 padding: EdgeInsets.only(bottom: 4),
                 child: Icon(Icons.surround_sound_outlined),
               ),
-              activeIcon: Padding(
+              activeIcon: const Padding(
                 padding: EdgeInsets.only(bottom: 4),
                 child: Icon(Icons.surround_sound),
               ),
-              label: 'Ѱ��',
+              label: AppLocalizations.of(context)!.findPet,
             ),
             BottomNavigationBarItem(
-              icon: Padding(
+              icon: const Padding(
                 padding: EdgeInsets.only(bottom: 4),
                 child: Icon(Icons.monitor_heart_outlined),
               ),
-              activeIcon: Padding(
+              activeIcon: const Padding(
                 padding: EdgeInsets.only(bottom: 4),
                 child: Icon(Icons.monitor_heart),
               ),
-              label: '����',
+              label: AppLocalizations.of(context)!.healthTab,
             ),
             BottomNavigationBarItem(
-              icon: Padding(
+              icon: const Padding(
                 padding: EdgeInsets.only(bottom: 4),
                 child: Icon(Icons.pets_outlined),
               ),
-              activeIcon: Padding(
+              activeIcon: const Padding(
                 padding: EdgeInsets.only(bottom: 4),
                 child: Icon(Icons.pets),
               ),
-              label: '����',
+              label: AppLocalizations.of(context)!.petTab,
             ),
           ],
         ),

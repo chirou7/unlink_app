@@ -592,6 +592,870 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Enter IMEI/SN'**
   String get enterImeiSn;
+
+  /// No description provided for @deviceName.
+  ///
+  /// In en, this message translates to:
+  /// **'Device Name'**
+  String get deviceName;
+
+  /// No description provided for @shareDeviceTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Share Device'**
+  String get shareDeviceTitle;
+
+  /// No description provided for @noSharedMembers.
+  ///
+  /// In en, this message translates to:
+  /// **'No shared members'**
+  String get noSharedMembers;
+
+  /// No description provided for @sharedMembersCanView.
+  ///
+  /// In en, this message translates to:
+  /// **'Shared members can view the device'**
+  String get sharedMembersCanView;
+
+  /// No description provided for @addSharedMember.
+  ///
+  /// In en, this message translates to:
+  /// **'Add shared member'**
+  String get addSharedMember;
+
+  /// No description provided for @alertSettingsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Alert Settings'**
+  String get alertSettingsTitle;
+
+  /// No description provided for @stopCharging.
+  ///
+  /// In en, this message translates to:
+  /// **'Stop Charging'**
+  String get stopCharging;
+
+  /// No description provided for @startCharging.
+  ///
+  /// In en, this message translates to:
+  /// **'Start Charging'**
+  String get startCharging;
+
+  /// No description provided for @outOfFenceAlert.
+  ///
+  /// In en, this message translates to:
+  /// **'Out of fence alert (Bluetooth)'**
+  String get outOfFenceAlert;
+
+  /// No description provided for @inFenceAlert.
+  ///
+  /// In en, this message translates to:
+  /// **'In fence alert (Bluetooth)'**
+  String get inFenceAlert;
+
+  /// No description provided for @stopMoving.
+  ///
+  /// In en, this message translates to:
+  /// **'Stop moving'**
+  String get stopMoving;
+
+  /// No description provided for @startMoving.
+  ///
+  /// In en, this message translates to:
+  /// **'Start moving'**
+  String get startMoving;
+
+  /// No description provided for @enterFence.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter fence'**
+  String get enterFence;
+
+  /// No description provided for @leaveFence.
+  ///
+  /// In en, this message translates to:
+  /// **'Leave fence'**
+  String get leaveFence;
+
+  /// No description provided for @devicePowerOn.
+  ///
+  /// In en, this message translates to:
+  /// **'Device powered on'**
+  String get devicePowerOn;
+
+  /// No description provided for @bluetoothConnected.
+  ///
+  /// In en, this message translates to:
+  /// **'Bluetooth connected'**
+  String get bluetoothConnected;
+
+  /// No description provided for @bluetoothDisconnected.
+  ///
+  /// In en, this message translates to:
+  /// **'Bluetooth disconnected'**
+  String get bluetoothDisconnected;
+
+  /// No description provided for @devicePowerOff.
+  ///
+  /// In en, this message translates to:
+  /// **'Device powered off'**
+  String get devicePowerOff;
+
+  /// No description provided for @deviceActivated.
+  ///
+  /// In en, this message translates to:
+  /// **'Device activated'**
+  String get deviceActivated;
+
+  /// No description provided for @deviceSettingsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Device Settings'**
+  String get deviceSettingsTitle;
+
+  /// No description provided for @findPetMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Find Pet Mode Settings'**
+  String get findPetMode;
+
+  /// No description provided for @findPetModeDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Location updates faster in Find Pet Mode to help you quickly find your pet, battery life will be shortened accordingly'**
+  String get findPetModeDesc;
+
+  /// No description provided for @soundSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Sound Settings'**
+  String get soundSettings;
+
+  /// No description provided for @soundSettingsDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Device sound settings'**
+  String get soundSettingsDesc;
+
+  /// No description provided for @timesSuffix.
+  ///
+  /// In en, this message translates to:
+  /// **'times'**
+  String get timesSuffix;
+
+  /// No description provided for @lightSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Light Settings'**
+  String get lightSettings;
+
+  /// No description provided for @lightSettingsDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Set light parameters'**
+  String get lightSettingsDesc;
+
+  /// No description provided for @powerSavingMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Power Saving Mode'**
+  String get powerSavingMode;
+
+  /// No description provided for @sleepSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Sleep Settings'**
+  String get sleepSettings;
+
+  /// No description provided for @sleepSettingsDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'When enabled, the device enters sleep mode during the set time range. The device is offline during sleep, and device activity will automatically exit sleep mode.'**
+  String get sleepSettingsDesc;
+
+  /// No description provided for @deviceSelfTest.
+  ///
+  /// In en, this message translates to:
+  /// **'Device Self-test'**
+  String get deviceSelfTest;
+
+  /// No description provided for @bluetoothFirmwareUpgrade.
+  ///
+  /// In en, this message translates to:
+  /// **'Bluetooth Firmware Upgrade'**
+  String get bluetoothFirmwareUpgrade;
+
+  /// No description provided for @duration.
+  ///
+  /// In en, this message translates to:
+  /// **'Duration'**
+  String get duration;
+
+  /// No description provided for @durationDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Find Pet Mode duration, automatically exits after time is up'**
+  String get durationDesc;
+
+  /// No description provided for @updateInterval.
+  ///
+  /// In en, this message translates to:
+  /// **'Update Interval'**
+  String get updateInterval;
+
+  /// No description provided for @updateIntervalDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Location update interval, shorter time means faster updates'**
+  String get updateIntervalDesc;
+
+  /// No description provided for @minute.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} min'**
+  String minute(int count);
+
+  /// No description provided for @second.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} sec'**
+  String second(int count);
+
+  /// No description provided for @lightColor.
+  ///
+  /// In en, this message translates to:
+  /// **'Light Color'**
+  String get lightColor;
+
+  /// No description provided for @lightColorDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Set light color'**
+  String get lightColorDesc;
+
+  /// No description provided for @flashMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Flash Mode'**
+  String get flashMode;
+
+  /// No description provided for @flashModeDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Set light flash frequency'**
+  String get flashModeDesc;
+
+  /// No description provided for @flashCount.
+  ///
+  /// In en, this message translates to:
+  /// **'Flash Count'**
+  String get flashCount;
+
+  /// No description provided for @flashCountDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Set the number of times the light flashes, the larger the value, the longer the flashing time'**
+  String get flashCountDesc;
+
+  /// No description provided for @colorRainbow.
+  ///
+  /// In en, this message translates to:
+  /// **'Rainbow Flashing'**
+  String get colorRainbow;
+
+  /// No description provided for @colorRed.
+  ///
+  /// In en, this message translates to:
+  /// **'Red Light'**
+  String get colorRed;
+
+  /// No description provided for @colorOrange.
+  ///
+  /// In en, this message translates to:
+  /// **'Orange Light'**
+  String get colorOrange;
+
+  /// No description provided for @colorYellow.
+  ///
+  /// In en, this message translates to:
+  /// **'Yellow Light'**
+  String get colorYellow;
+
+  /// No description provided for @colorGreen.
+  ///
+  /// In en, this message translates to:
+  /// **'Green Light'**
+  String get colorGreen;
+
+  /// No description provided for @flashBreathing.
+  ///
+  /// In en, this message translates to:
+  /// **'Breathing'**
+  String get flashBreathing;
+
+  /// No description provided for @flashSlow.
+  ///
+  /// In en, this message translates to:
+  /// **'Slow Flash'**
+  String get flashSlow;
+
+  /// No description provided for @flashFast.
+  ///
+  /// In en, this message translates to:
+  /// **'Burst Flash'**
+  String get flashFast;
+
+  /// No description provided for @times.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} times'**
+  String times(int count);
+
+  /// No description provided for @sleepSwitch.
+  ///
+  /// In en, this message translates to:
+  /// **'Sleep Switch'**
+  String get sleepSwitch;
+
+  /// No description provided for @sleepSwitchDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Control sleep mode on and off'**
+  String get sleepSwitchDesc;
+
+  /// No description provided for @startTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Start Time'**
+  String get startTime;
+
+  /// No description provided for @startTimeDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Sleep start time, device will automatically enter sleep mode at this time'**
+  String get startTimeDesc;
+
+  /// No description provided for @endTime.
+  ///
+  /// In en, this message translates to:
+  /// **'End Time'**
+  String get endTime;
+
+  /// No description provided for @endTimeDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Sleep end time, device will automatically exit sleep mode at this time'**
+  String get endTimeDesc;
+
+  /// No description provided for @selectTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Select'**
+  String get selectTime;
+
+  /// No description provided for @deviceCheckTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Device Self-test'**
+  String get deviceCheckTitle;
+
+  /// No description provided for @startCheck.
+  ///
+  /// In en, this message translates to:
+  /// **'Start'**
+  String get startCheck;
+
+  /// No description provided for @checkDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Click start to run device self-test, which helps diagnose potential issues'**
+  String get checkDesc;
+
+  /// No description provided for @currentVersion.
+  ///
+  /// In en, this message translates to:
+  /// **'Current Version'**
+  String get currentVersion;
+
+  /// No description provided for @versionUpToDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Version is up to date'**
+  String get versionUpToDate;
+
+  /// No description provided for @petName.
+  ///
+  /// In en, this message translates to:
+  /// **'Pet Name'**
+  String get petName;
+
+  /// No description provided for @petBreed.
+  ///
+  /// In en, this message translates to:
+  /// **'Breed'**
+  String get petBreed;
+
+  /// No description provided for @petGender.
+  ///
+  /// In en, this message translates to:
+  /// **'Gender'**
+  String get petGender;
+
+  /// No description provided for @petBirthday.
+  ///
+  /// In en, this message translates to:
+  /// **'Birthday'**
+  String get petBirthday;
+
+  /// No description provided for @petWeight.
+  ///
+  /// In en, this message translates to:
+  /// **'Weight'**
+  String get petWeight;
+
+  /// No description provided for @petHeight.
+  ///
+  /// In en, this message translates to:
+  /// **'Height'**
+  String get petHeight;
+
+  /// No description provided for @petLength.
+  ///
+  /// In en, this message translates to:
+  /// **'Length'**
+  String get petLength;
+
+  /// No description provided for @petNeutered.
+  ///
+  /// In en, this message translates to:
+  /// **'Neutered'**
+  String get petNeutered;
+
+  /// No description provided for @petVaccination.
+  ///
+  /// In en, this message translates to:
+  /// **'Vaccination'**
+  String get petVaccination;
+
+  /// No description provided for @confirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm'**
+  String get confirm;
+
+  /// No description provided for @skip.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip'**
+  String get skip;
+
+  /// No description provided for @selectHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Select'**
+  String get selectHint;
+
+  /// No description provided for @enterHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter'**
+  String get enterHint;
+
+  /// No description provided for @save.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get save;
+
+  /// No description provided for @male.
+  ///
+  /// In en, this message translates to:
+  /// **'Male'**
+  String get male;
+
+  /// No description provided for @female.
+  ///
+  /// In en, this message translates to:
+  /// **'Female'**
+  String get female;
+
+  /// No description provided for @yes.
+  ///
+  /// In en, this message translates to:
+  /// **'Yes'**
+  String get yes;
+
+  /// No description provided for @no.
+  ///
+  /// In en, this message translates to:
+  /// **'No'**
+  String get no;
+
+  /// No description provided for @pleaseEnter.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter'**
+  String get pleaseEnter;
+
+  /// No description provided for @vacNotVaccinated.
+  ///
+  /// In en, this message translates to:
+  /// **'Not Vaccinated'**
+  String get vacNotVaccinated;
+
+  /// No description provided for @vacVaccinated.
+  ///
+  /// In en, this message translates to:
+  /// **'Vaccinated'**
+  String get vacVaccinated;
+
+  /// No description provided for @vaccinationDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Vaccination Date'**
+  String get vaccinationDate;
+
+  /// No description provided for @forgotVaccinationTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Forgot vaccination time?'**
+  String get forgotVaccinationTime;
+
+  /// No description provided for @yearSuffix.
+  ///
+  /// In en, this message translates to:
+  /// **''**
+  String get yearSuffix;
+
+  /// No description provided for @monthSuffix.
+  ///
+  /// In en, this message translates to:
+  /// **''**
+  String get monthSuffix;
+
+  /// No description provided for @daySuffix.
+  ///
+  /// In en, this message translates to:
+  /// **''**
+  String get daySuffix;
+
+  /// No description provided for @selectBreed.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Breed'**
+  String get selectBreed;
+
+  /// No description provided for @tabDog.
+  ///
+  /// In en, this message translates to:
+  /// **'🐶 Dog'**
+  String get tabDog;
+
+  /// No description provided for @tabCat.
+  ///
+  /// In en, this message translates to:
+  /// **'🐱 Cat'**
+  String get tabCat;
+
+  /// No description provided for @searchBreedHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Search breed/alias/pinyin'**
+  String get searchBreedHint;
+
+  /// No description provided for @hotRecommendation.
+  ///
+  /// In en, this message translates to:
+  /// **'🔥 Hot Recommendation'**
+  String get hotRecommendation;
+
+  /// No description provided for @allBreeds.
+  ///
+  /// In en, this message translates to:
+  /// **'🗂 All Breeds'**
+  String get allBreeds;
+
+  /// No description provided for @searchEmptyHint.
+  ///
+  /// In en, this message translates to:
+  /// **'No matching breed found, you can:'**
+  String get searchEmptyHint;
+
+  /// No description provided for @selectMixedBreed.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Mixed Breed'**
+  String get selectMixedBreed;
+
+  /// No description provided for @selectUnknownBreed.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Unknown Breed'**
+  String get selectUnknownBreed;
+
+  /// No description provided for @finish.
+  ///
+  /// In en, this message translates to:
+  /// **'Finish'**
+  String get finish;
+
+  /// No description provided for @activationSuccessGreeting1.
+  ///
+  /// In en, this message translates to:
+  /// **'Hello '**
+  String get activationSuccessGreeting1;
+
+  /// No description provided for @activationSuccessGreeting2.
+  ///
+  /// In en, this message translates to:
+  /// **'! Your device is activated.'**
+  String get activationSuccessGreeting2;
+
+  /// No description provided for @virtualPet.
+  ///
+  /// In en, this message translates to:
+  /// **'Virtual Pet'**
+  String get virtualPet;
+
+  /// No description provided for @newBadge.
+  ///
+  /// In en, this message translates to:
+  /// **'New'**
+  String get newBadge;
+
+  /// No description provided for @addPet.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Pet'**
+  String get addPet;
+
+  /// No description provided for @bluetoothPositioning.
+  ///
+  /// In en, this message translates to:
+  /// **'Bluetooth Positioning'**
+  String get bluetoothPositioning;
+
+  /// No description provided for @minutesAgo.
+  ///
+  /// In en, this message translates to:
+  /// **'{minutes} mins ago'**
+  String minutesAgo(int minutes);
+
+  /// No description provided for @today.
+  ///
+  /// In en, this message translates to:
+  /// **'Today'**
+  String get today;
+
+  /// No description provided for @goal.
+  ///
+  /// In en, this message translates to:
+  /// **'Goal'**
+  String get goal;
+
+  /// No description provided for @activity.
+  ///
+  /// In en, this message translates to:
+  /// **'Activity'**
+  String get activity;
+
+  /// No description provided for @minutes.
+  ///
+  /// In en, this message translates to:
+  /// **'mins'**
+  String get minutes;
+
+  /// No description provided for @calories.
+  ///
+  /// In en, this message translates to:
+  /// **'Calories'**
+  String get calories;
+
+  /// No description provided for @kcal.
+  ///
+  /// In en, this message translates to:
+  /// **'kcal'**
+  String get kcal;
+
+  /// No description provided for @rest.
+  ///
+  /// In en, this message translates to:
+  /// **'Rest'**
+  String get rest;
+
+  /// No description provided for @hours.
+  ///
+  /// In en, this message translates to:
+  /// **'h'**
+  String get hours;
+
+  /// No description provided for @steps.
+  ///
+  /// In en, this message translates to:
+  /// **'Steps'**
+  String get steps;
+
+  /// No description provided for @trajectory.
+  ///
+  /// In en, this message translates to:
+  /// **'Trajectory'**
+  String get trajectory;
+
+  /// No description provided for @stayTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Stay time'**
+  String get stayTime;
+
+  /// No description provided for @geofence.
+  ///
+  /// In en, this message translates to:
+  /// **'Geofence'**
+  String get geofence;
+
+  /// No description provided for @viewAll.
+  ///
+  /// In en, this message translates to:
+  /// **'View all'**
+  String get viewAll;
+
+  /// No description provided for @noGeofenceCreated.
+  ///
+  /// In en, this message translates to:
+  /// **'No geofence created'**
+  String get noGeofenceCreated;
+
+  /// No description provided for @createNew.
+  ///
+  /// In en, this message translates to:
+  /// **'Create new'**
+  String get createNew;
+
+  /// No description provided for @light.
+  ///
+  /// In en, this message translates to:
+  /// **'Light'**
+  String get light;
+
+  /// No description provided for @sound.
+  ///
+  /// In en, this message translates to:
+  /// **'Sound'**
+  String get sound;
+
+  /// No description provided for @findPet.
+  ///
+  /// In en, this message translates to:
+  /// **'Find Pet'**
+  String get findPet;
+
+  /// No description provided for @gps.
+  ///
+  /// In en, this message translates to:
+  /// **'GPS'**
+  String get gps;
+
+  /// No description provided for @now.
+  ///
+  /// In en, this message translates to:
+  /// **'Now'**
+  String get now;
+
+  /// No description provided for @homeTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get homeTab;
+
+  /// No description provided for @healthTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Health'**
+  String get healthTab;
+
+  /// No description provided for @petTab.
+  ///
+  /// In en, this message translates to:
+  /// **'Pet'**
+  String get petTab;
+
+  /// No description provided for @sun.
+  ///
+  /// In en, this message translates to:
+  /// **'Sun'**
+  String get sun;
+
+  /// No description provided for @mon.
+  ///
+  /// In en, this message translates to:
+  /// **'Mon'**
+  String get mon;
+
+  /// No description provided for @tue.
+  ///
+  /// In en, this message translates to:
+  /// **'Tue'**
+  String get tue;
+
+  /// No description provided for @wed.
+  ///
+  /// In en, this message translates to:
+  /// **'Wed'**
+  String get wed;
+
+  /// No description provided for @thu.
+  ///
+  /// In en, this message translates to:
+  /// **'Thu'**
+  String get thu;
+
+  /// No description provided for @fri.
+  ///
+  /// In en, this message translates to:
+  /// **'Fri'**
+  String get fri;
+
+  /// No description provided for @sat.
+  ///
+  /// In en, this message translates to:
+  /// **'Sat'**
+  String get sat;
+
+  /// No description provided for @progress.
+  ///
+  /// In en, this message translates to:
+  /// **'Progress'**
+  String get progress;
+
+  /// No description provided for @caloriesDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Calories are calculated based on your pet\'s breed, age, weight, and real-time steps to provide the most accurate estimate of actual energy expenditure.'**
+  String get caloriesDesc;
+
+  /// No description provided for @selectAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Select'**
+  String get selectAction;
+
+  /// No description provided for @ageMonths.
+  ///
+  /// In en, this message translates to:
+  /// **'{months} mo'**
+  String ageMonths(int months);
+
+  /// No description provided for @ageYears.
+  ///
+  /// In en, this message translates to:
+  /// **'{years} yr'**
+  String ageYears(int years);
+
+  /// No description provided for @ageYearsMonths.
+  ///
+  /// In en, this message translates to:
+  /// **'{years}y {months}m'**
+  String ageYearsMonths(int years, int months);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

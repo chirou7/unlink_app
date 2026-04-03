@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../l10n/app_localizations.dart';
 import '../utils/app_colors.dart';
+import 'pet_profile_page.dart';
 
 class ManualAddPage extends StatefulWidget {
   const ManualAddPage({super.key});
@@ -41,11 +42,7 @@ class _ManualAddPageState extends State<ManualAddPage> {
         backgroundColor: AppColors.backgroundWhite,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(
-            Icons.close,
-            color: AppColors.textPrimary,
-            size: 26,
-          ),
+          icon: const Icon(Icons.close, color: AppColors.textPrimary, size: 26),
           onPressed: () {
             HapticFeedback.selectionClick();
             Navigator.pop(context);
@@ -54,7 +51,8 @@ class _ManualAddPageState extends State<ManualAddPage> {
       ),
       body: SafeArea(
         child: GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(), // Dismiss keyboard on tap
+          onTap: () =>
+              FocusScope.of(context).unfocus(), // Dismiss keyboard on tap
           child: SingleChildScrollView(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Column(
@@ -111,10 +109,7 @@ class _ManualAddPageState extends State<ManualAddPage> {
       decoration: BoxDecoration(
         color: AppColors.backgroundWhite,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(
-          color: AppColors.primaryYellow,
-          width: 1.5,
-        ),
+        border: Border.all(color: AppColors.primaryYellow, width: 1.5),
       ),
       child: Row(
         children: [
@@ -166,7 +161,16 @@ class _ManualAddPageState extends State<ManualAddPage> {
               ? () {
                   HapticFeedback.selectionClick();
                   _focusNode.unfocus();
-                  // TODO: Handle next step action
+                  if (_imeiController.text.trim() == 'admin') {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PetProfilePage(),
+                      ),
+                    );
+                  } else {
+                    // TODO: Handle next step action
+                  }
                 }
               : null,
           child: Container(
@@ -184,9 +188,7 @@ class _ManualAddPageState extends State<ManualAddPage> {
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
-                color: isEnabled
-                    ? AppColors.textPrimary
-                    : AppColors.textHint,
+                color: isEnabled ? AppColors.textPrimary : AppColors.textHint,
               ),
             ),
           ),

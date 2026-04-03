@@ -7,10 +7,13 @@ import '../widgets/common_list_tile.dart';
 import 'pet_detail_page.dart'; // ����������ת�ĳ�������ҳ��
 import 'device_share_page.dart'; // �����豸����ҳ��
 import 'alert_settings_page.dart'; // ����澯����ҳ��
-import 'device_settings_page.dart'; // ���������豸����ҳ��
-import 'help_feedback_page.dart'; // ��������뷴��ҳ��
-import 'subscription_plan_page.dart'; // ���붩�ļƻ�ҳ��
-import 'home_page.dart'; // ������ҳ�Ա������ת
+import 'device_settings_page.dart';
+import 'help_feedback_page.dart';
+import 'subscription_plan_page.dart';
+import 'home_page.dart';
+import 'device_name_edit_page.dart'; // 添加新页面的导入
+
+import '../l10n/app_localizations.dart'; // 引入多语言
 
 class DeviceInfoPage extends StatelessWidget {
   final DeviceModel device;
@@ -19,6 +22,7 @@ class DeviceInfoPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       backgroundColor: const Color(0xFFF7F8FA),
       appBar: AppBar(
@@ -33,9 +37,9 @@ class DeviceInfoPage extends StatelessWidget {
           ),
           onPressed: () => Navigator.pop(context),
         ),
-        title: const Text(
-          '�豸��Ϣ',
-          style: TextStyle(
+        title: Text(
+          l10n.deviceInfo,
+          style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
             color: Color(0xFF111111),
@@ -47,15 +51,15 @@ class DeviceInfoPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
           child: Column(
             children: [
-              // 1. �����豸������Ϣ��Ƭ
-              _buildDeviceBaseInfoCard(context),
+              // 1. 设备基本信息卡片
+              _buildDeviceBaseInfoCard(context, l10n),
               const SizedBox(height: 16),
 
-              // 2. ��ɫ�����ײͿ�Ƭ
-              _buildSubscriptionCard(context),
+              // 2. 黑色订阅套餐卡片
+              _buildSubscriptionCard(context, l10n),
               const SizedBox(height: 16),
 
-              // 3. �������ÿ�Ƭ��
+              // 3. 第一个设置卡片组
               Container(
                 decoration: BoxDecoration(
                   color: AppColors.backgroundWhite,
@@ -65,7 +69,7 @@ class DeviceInfoPage extends StatelessWidget {
                 child: Column(
                   children: [
                     CommonListTile(
-                      title: '������Ϣ',
+                      title: l10n.petInfo,
                       trailing: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: const [
@@ -76,7 +80,7 @@ class DeviceInfoPage extends StatelessWidget {
                           ),
                           SizedBox(width: 6),
                           Text(
-                            '11',
+                            'lo',
                             style: TextStyle(
                               fontSize: 15,
                               color: AppColors.textPrimary,
@@ -85,7 +89,7 @@ class DeviceInfoPage extends StatelessWidget {
                         ],
                       ),
                       onTap: () {
-                        // ��ת����������ҳ (Ŀǰ�����еĴ����ݵ�ҳ�����)
+                        // 跳转到宠物档案页
                         Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -95,7 +99,7 @@ class DeviceInfoPage extends StatelessWidget {
                       },
                     ),
                     CommonListTile(
-                      title: '�豸����',
+                      title: l10n.deviceShare,
                       hasBorderBottom: false,
                       onTap: () {
                         Navigator.push(
@@ -111,7 +115,7 @@ class DeviceInfoPage extends StatelessWidget {
               ),
               const SizedBox(height: 16),
 
-              // 4. �����������ÿ�Ƭ��
+              // 4. 第二个设置卡片组
               Container(
                 decoration: BoxDecoration(
                   color: AppColors.backgroundWhite,
@@ -121,7 +125,7 @@ class DeviceInfoPage extends StatelessWidget {
                 child: Column(
                   children: [
                     CommonListTile(
-                      title: '��������',
+                      title: l10n.alertSettings,
                       onTap: () {
                         Navigator.push(
                           context,
@@ -132,7 +136,7 @@ class DeviceInfoPage extends StatelessWidget {
                       },
                     ),
                     CommonListTile(
-                      title: '��������',
+                      title: l10n.otherSettings,
                       onTap: () {
                         Navigator.push(
                           context,
@@ -143,7 +147,7 @@ class DeviceInfoPage extends StatelessWidget {
                       },
                     ),
                     CommonListTile(
-                      title: '�����뷴��',
+                      title: l10n.helpAndFeedback,
                       onTap: () {
                         Navigator.push(
                           context,
@@ -154,16 +158,16 @@ class DeviceInfoPage extends StatelessWidget {
                       },
                     ),
                     CommonListTile(
-                      title: '���',
+                      title: l10n.unbind,
                       titleColor: AppColors.errorRed,
                       hasBorderBottom: false,
-                      showArrow: false,
-                      onTap: () => _showUnbindDialog(context),
+                      showArrow: true, // 根据截图显示箭头
+                      onTap: () => _showUnbindDialog(context, l10n),
                     ),
                   ],
                 ),
               ),
-              const SizedBox(height: 40), // �ײ�����
+              const SizedBox(height: 40), // 底部留白
             ],
           ),
         ),
@@ -172,11 +176,11 @@ class DeviceInfoPage extends StatelessWidget {
   }
 
   // ==============================================
-  // �ֲ�������
+  // 局部组件方法
   // ==============================================
 
-  // �������ȷ�ϵ���
-  void _showUnbindDialog(BuildContext context) {
+  // 弹窗确认解绑
+  void _showUnbindDialog(BuildContext context, AppLocalizations l10n) {
     showModalBottomSheet(
       context: context,
       backgroundColor: Colors.transparent,
@@ -191,9 +195,9 @@ class DeviceInfoPage extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Text(
-                  '���',
-                  style: TextStyle(
+                Text(
+                  l10n.unbind,
+                  style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: AppColors.textPrimary,
@@ -201,7 +205,7 @@ class DeviceInfoPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 const Text(
-                  '�����豸����ʷ���ݽ�����ȫɾ������ȷ��Ҫ�����',
+                  '解绑后设备及历史数据将被安全删除，您确定要解绑吗？', // Here we can use l10n if we have it, else hardcode
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 15,
@@ -223,9 +227,9 @@ class DeviceInfoPage extends StatelessWidget {
                           ),
                           backgroundColor: Colors.white,
                         ),
-                        child: const Text(
-                          'ȡ��',
-                          style: TextStyle(
+                        child: Text(
+                          l10n.cancel,
+                          style: const TextStyle(
                             fontSize: 16,
                             color: AppColors.textPrimary,
                             fontWeight: FontWeight.w500,
@@ -237,13 +241,9 @@ class DeviceInfoPage extends StatelessWidget {
                     Expanded(
                       child: ElevatedButton(
                         onPressed: () {
-                          // �رյײ�����
+                          // 关闭底部弹窗
                           Navigator.pop(context);
 
-                          // ���ص���ҳ��������һ����־��ʾ�豸�ѽ��
-                          // ��Ϊ�м���� DeviceMainPage �� DeviceDetailPage��
-                          // ����ʹ�� popUntil һֱ���ص� HomePage��
-                          // ��ͨ�� pushReplacement ���¼���һ���յ� HomePage
                           Navigator.pushAndRemoveUntil(
                             context,
                             MaterialPageRoute(
@@ -253,20 +253,22 @@ class DeviceInfoPage extends StatelessWidget {
                             (route) => false,
                           );
 
-                          // ��ʾ�Զ���ĳɹ���ʾ��Ϣ
-                          AppToast.showSuccess(context, '�豸�ѽ��');
+                          AppToast.showSuccess(
+                            context,
+                            '设备已解绑',
+                          ); // Hardcoded for now
                         },
                         style: ElevatedButton.styleFrom(
                           padding: const EdgeInsets.symmetric(vertical: 16),
-                          backgroundColor: const Color(0xFFFF5252), // ��ɫ���ť
+                          backgroundColor: const Color(0xFFFF5252), // 红色按钮
                           elevation: 0,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(999),
                           ),
                         ),
-                        child: const Text(
-                          '���',
-                          style: TextStyle(
+                        child: Text(
+                          l10n.unbind,
+                          style: const TextStyle(
                             fontSize: 16,
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -284,86 +286,93 @@ class DeviceInfoPage extends StatelessWidget {
     );
   }
 
-  // 1. �豸������Ϣ��Ƭ
-  Widget _buildDeviceBaseInfoCard(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        color: AppColors.backgroundWhite,
-        borderRadius: BorderRadius.circular(24), // �������ͼ�Ŵ�Բ��
-      ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // ����豸ͼƬ
-          Container(
-            width: 80, // �������ͼ�Ŵ�ͼƬռλ
-            height: 80,
-            decoration: BoxDecoration(
-              color: AppColors.backgroundGray,
-              borderRadius: BorderRadius.circular(16),
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(16),
-              child: Image.network(
-                device.imageUrl,
-                fit: BoxFit.cover,
-                errorBuilder: (context, error, stackTrace) => const Center(
-                  child: Icon(
-                    Icons.contact_support_outlined, // ���������ʺŵ�ͼ��
-                    color: AppColors.textHint,
-                    size: 32,
+  // 1. 设备基本信息卡片
+  Widget _buildDeviceBaseInfoCard(BuildContext context, AppLocalizations l10n) {
+    return GestureDetector(
+      onTap: () {
+        // 跳转到设备名称编辑页
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => DeviceNameEditPage(device: device),
+          ),
+        );
+      },
+      child: Container(
+        padding: const EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          color: AppColors.backgroundWhite,
+          borderRadius: BorderRadius.circular(24),
+        ),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            // 左侧设备图片
+            Container(
+              width: 80,
+              height: 80,
+              decoration: BoxDecoration(
+                color: AppColors.backgroundGray,
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: Image.network(
+                  device.imageUrl,
+                  fit: BoxFit.cover,
+                  errorBuilder: (context, error, stackTrace) => const Center(
+                    child: Icon(
+                      Icons.contact_support_outlined,
+                      color: AppColors.textHint,
+                      size: 32,
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
-          const SizedBox(width: 16),
-          // �Ҳ���ϸ��Ϣ
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Expanded(
-                      child: Text(
-                        device.name,
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: AppColors.textPrimary,
-                        ),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                      ),
+            const SizedBox(width: 16),
+            // 右侧详细信息
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    device.name,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: AppColors.textPrimary,
                     ),
-                    const Icon(
-                      Icons.chevron_right,
-                      color: AppColors.textHint,
-                      size: 20,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    l10n.modelLabel('PT02E'), // 写入模拟数据，后期可换成模型字段
+                    style: const TextStyle(
+                      fontSize: 13,
+                      color: AppColors.textTertiary,
                     ),
-                  ],
-                ),
-                const SizedBox(height: 8),
-                const Text(
-                  '�ͺ�: PT02E', // д��ģ�����ݣ����ڿɻ���ģ���ֶ�
-                  style: TextStyle(fontSize: 13, color: AppColors.textTertiary),
-                ),
-                const SizedBox(height: 6),
-                _buildCopyableRow(context, 'IMEI', '865530078499001'),
-                const SizedBox(height: 6),
-                _buildCopyableRow(context, 'MAC', 'D4:0D:DE:04:F9:46'),
-              ],
+                  ),
+                  const SizedBox(height: 6),
+                  _buildCopyableRow(context, 'IMEI', '865530078499001'),
+                  const SizedBox(height: 6),
+                  _buildCopyableRow(context, 'MAC', 'D4:0D:DE:04:F9:46'),
+                ],
+              ),
             ),
-          ),
-        ],
+            const Icon(
+              Icons.chevron_right,
+              color: AppColors.textHint,
+              size: 20,
+            ),
+          ],
+        ),
       ),
     );
   }
 
-  // ���и���ͼ�����Ϣ��
+  // 包含可复制图标的信息行
   Widget _buildCopyableRow(BuildContext context, String label, String value) {
     return Row(
       children: [
@@ -375,20 +384,23 @@ class DeviceInfoPage extends StatelessWidget {
         GestureDetector(
           onTap: () {
             Clipboard.setData(ClipboardData(text: value));
-            AppToast.showSuccess(context, '$label �Ѹ���'); // ʹ���Զ��� Toast
+            AppToast.showSuccess(
+              context,
+              AppLocalizations.of(context)!.copied(label),
+            ); // 使用多语言
           },
           child: const Icon(
             Icons.content_copy,
             color: AppColors.textHint,
             size: 14,
-          ), // ���ɸ������ͼ����ҳֽ����ͼ��
+          ), // 点击复制的图标
         ),
       ],
     );
   }
 
-  // 2. ��ɫ�Ķ��Ŀ�Ƭ
-  Widget _buildSubscriptionCard(BuildContext context) {
+  // 2. 黑色订阅套餐卡片
+  Widget _buildSubscriptionCard(BuildContext context, AppLocalizations l10n) {
     return GestureDetector(
       onTap: () {
         Navigator.push(
@@ -427,19 +439,22 @@ class DeviceInfoPage extends StatelessWidget {
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
-                    '��� - �������-�����ײ�',
-                    style: TextStyle(
+                    l10n.subscriptionPlan,
+                    style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(height: 6),
+                  const SizedBox(height: 6),
                   Text(
-                    '����ʱ�� 2027-03-27',
-                    style: TextStyle(fontSize: 13, color: AppColors.textHint),
+                    l10n.expireTime('2027-03-27'),
+                    style: const TextStyle(
+                      fontSize: 13,
+                      color: AppColors.textHint,
+                    ),
                   ),
                 ],
               ),

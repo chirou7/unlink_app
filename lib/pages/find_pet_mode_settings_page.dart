@@ -5,72 +5,35 @@ import '../utils/app_colors.dart';
 import '../utils/app_toast.dart';
 import '../widgets/common_bottom_sheet.dart';
 
-class LightSettingsPage extends StatefulWidget {
+class FindPetModeSettingsPage extends StatefulWidget {
   final dynamic device;
-  const LightSettingsPage({super.key, this.device});
+  const FindPetModeSettingsPage({super.key, this.device});
 
   @override
-  State<LightSettingsPage> createState() => _LightSettingsPageState();
+  State<FindPetModeSettingsPage> createState() => _FindPetModeSettingsPageState();
 }
 
-class _LightSettingsPageState extends State<LightSettingsPage> {
-  String _selectedColorKey = 'colorRainbow';
-  String _selectedFlashModeKey = 'flashSlow';
-  int _selectedFlashCount = 1;
+class _FindPetModeSettingsPageState extends State<FindPetModeSettingsPage> {
+  int _selectedDuration = 5; // 5 minutes
+  int _selectedInterval = 5; // 5 seconds
 
-  final List<String> _colorOptionsKeys = [
-    'colorRainbow',
-    'colorRed',
-    'colorOrange',
-    'colorYellow',
-    'colorGreen',
-  ];
+  final List<int> _durationOptions = [1, 5, 30];
+  final List<int> _intervalOptions = [3, 5];
 
-  final List<String> _flashModeOptionsKeys = [
-    'flashBreathing',
-    'flashSlow',
-    'flashFast',
-  ];
-
-  final List<int> _flashCountOptions = [1, 5, 10];
-
-  String _getL10nString(AppLocalizations l10n, String key) {
-    switch (key) {
-      case 'colorRainbow':
-        return l10n.colorRainbow;
-      case 'colorRed':
-        return l10n.colorRed;
-      case 'colorOrange':
-        return l10n.colorOrange;
-      case 'colorYellow':
-        return l10n.colorYellow;
-      case 'colorGreen':
-        return l10n.colorGreen;
-      case 'flashBreathing':
-        return l10n.flashBreathing;
-      case 'flashSlow':
-        return l10n.flashSlow;
-      case 'flashFast':
-        return l10n.flashFast;
-      default:
-        return '';
-    }
-  }
-
-  void _showColorPicker(BuildContext context, AppLocalizations l10n) {
+  void _showDurationPicker(BuildContext context, AppLocalizations l10n) {
     HapticFeedback.selectionClick();
     CommonBottomSheet.show(
       context,
-      title: l10n.lightColor,
+      title: l10n.duration,
       child: Column(
         mainAxisSize: MainAxisSize.min,
-        children: _colorOptionsKeys.map((key) {
-          final isSelected = _selectedColorKey == key;
+        children: _durationOptions.map((duration) {
+          final isSelected = _selectedDuration == duration;
           return InkWell(
             onTap: () {
               HapticFeedback.selectionClick();
               setState(() {
-                _selectedColorKey = key;
+                _selectedDuration = duration;
               });
               Navigator.pop(context);
             },
@@ -88,7 +51,7 @@ class _LightSettingsPageState extends State<LightSettingsPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    _getL10nString(l10n, key),
+                    l10n.minute(duration),
                     style: TextStyle(
                       fontSize: 16,
                       color: isSelected ? AppColors.textPrimary : AppColors.textSecondary,
@@ -110,20 +73,20 @@ class _LightSettingsPageState extends State<LightSettingsPage> {
     );
   }
 
-  void _showFlashModePicker(BuildContext context, AppLocalizations l10n) {
+  void _showIntervalPicker(BuildContext context, AppLocalizations l10n) {
     HapticFeedback.selectionClick();
     CommonBottomSheet.show(
       context,
-      title: l10n.flashMode,
+      title: l10n.updateInterval,
       child: Column(
         mainAxisSize: MainAxisSize.min,
-        children: _flashModeOptionsKeys.map((key) {
-          final isSelected = _selectedFlashModeKey == key;
+        children: _intervalOptions.map((interval) {
+          final isSelected = _selectedInterval == interval;
           return InkWell(
             onTap: () {
               HapticFeedback.selectionClick();
               setState(() {
-                _selectedFlashModeKey = key;
+                _selectedInterval = interval;
               });
               Navigator.pop(context);
             },
@@ -141,60 +104,7 @@ class _LightSettingsPageState extends State<LightSettingsPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    _getL10nString(l10n, key),
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: isSelected ? AppColors.textPrimary : AppColors.textSecondary,
-                      fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-                    ),
-                  ),
-                  if (isSelected)
-                    const Icon(
-                      Icons.check,
-                      color: AppColors.primaryYellow,
-                      size: 20,
-                    ),
-                ],
-              ),
-            ),
-          );
-        }).toList(),
-      ),
-    );
-  }
-
-  void _showFlashCountPicker(BuildContext context, AppLocalizations l10n) {
-    HapticFeedback.selectionClick();
-    CommonBottomSheet.show(
-      context,
-      title: l10n.flashCount,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: _flashCountOptions.map((count) {
-          final isSelected = _selectedFlashCount == count;
-          return InkWell(
-            onTap: () {
-              HapticFeedback.selectionClick();
-              setState(() {
-                _selectedFlashCount = count;
-              });
-              Navigator.pop(context);
-            },
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
-              decoration: const BoxDecoration(
-                border: Border(
-                  bottom: BorderSide(
-                    color: AppColors.dividerLight,
-                    width: 0.5,
-                  ),
-                ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    l10n.times(count),
+                    l10n.second(interval),
                     style: TextStyle(
                       fontSize: 16,
                       color: isSelected ? AppColors.textPrimary : AppColors.textSecondary,
@@ -235,7 +145,7 @@ class _LightSettingsPageState extends State<LightSettingsPage> {
           onPressed: () => Navigator.pop(context),
         ),
         title: Text(
-          l10n.lightSettings,
+          l10n.findPetMode,
           style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
@@ -258,23 +168,17 @@ class _LightSettingsPageState extends State<LightSettingsPage> {
                   child: Column(
                     children: [
                       _buildSettingItem(
-                        title: l10n.lightColor,
-                        subtitle: l10n.lightColorDesc,
-                        trailingText: _getL10nString(l10n, _selectedColorKey),
-                        onTap: () => _showColorPicker(context, l10n),
+                        title: l10n.duration,
+                        subtitle: l10n.durationDesc,
+                        trailingText: l10n.minute(_selectedDuration),
+                        onTap: () => _showDurationPicker(context, l10n),
                       ),
                       _buildSettingItem(
-                        title: l10n.flashMode,
-                        subtitle: l10n.flashModeDesc,
-                        trailingText: _getL10nString(l10n, _selectedFlashModeKey),
-                        onTap: () => _showFlashModePicker(context, l10n),
-                      ),
-                      _buildSettingItem(
-                        title: l10n.flashCount,
-                        subtitle: l10n.flashCountDesc,
-                        trailingText: l10n.times(_selectedFlashCount),
+                        title: l10n.updateInterval,
+                        subtitle: l10n.updateIntervalDesc,
+                        trailingText: l10n.second(_selectedInterval),
                         hasBorderBottom: false,
-                        onTap: () => _showFlashCountPicker(context, l10n),
+                        onTap: () => _showIntervalPicker(context, l10n),
                       ),
                     ],
                   ),

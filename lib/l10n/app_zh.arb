@@ -140,5 +140,201 @@
   "termsOfUse": "使用条款",
   "appVersion": "版本",
   "findImeiSnHint": "你可以在盒子背面或设备上找到IMEI/SN",
-  "enterImeiSn": "输入IMEI/SN"
+  "enterImeiSn": "输入IMEI/SN",
+  "deviceName": "设备名称",
+  "shareDeviceTitle": "分享设备",
+  "noSharedMembers": "无分享成员",
+  "sharedMembersCanView": "分享成员可以查看设备",
+  "addSharedMember": "添加分享成员",
+  "alertSettingsTitle": "告警设置",
+  "stopCharging": "停止充电",
+  "startCharging": "开始充电",
+  "outOfFenceAlert": "出围栏报警(蓝牙)",
+  "inFenceAlert": "进围栏报警(蓝牙)",
+  "stopMoving": "停止运动",
+  "startMoving": "开始运动",
+  "enterFence": "进入围栏",
+  "leaveFence": "离开围栏",
+  "devicePowerOn": "设备开机",
+  "bluetoothConnected": "蓝牙连接",
+  "bluetoothDisconnected": "蓝牙断开连接",
+  "devicePowerOff": "设备关机",
+  "deviceActivated": "设备激活",
+  "deviceSettingsTitle": "设备设置",
+  "findPetMode": "寻宠模式设置",
+  "findPetModeDesc": "寻宠模式位置更新更快，帮助您迅速找到宠物，电池续航会相应缩短",
+  "soundSettings": "声音设置",
+  "soundSettingsDesc": "设备声音设置",
+  "timesSuffix": "次",
+  "lightSettings": "灯光设置",
+  "lightSettingsDesc": "设置灯光参数",
+  "powerSavingMode": "省电模式",
+  "sleepSettings": "休眠设置",
+  "sleepSettingsDesc": "开启后设备在设置时间范围内进入休眠模式，休眠过程中设备离线，设备活动会自动退出休眠。",
+  "deviceSelfTest": "设备自检",
+  "bluetoothFirmwareUpgrade": "蓝牙固件升级",
+  "duration": "持续时长",
+  "durationDesc": "寻宠模式持续时长，到时间后自动退出",
+  "updateInterval": "定位更新间隔",
+  "updateIntervalDesc": "定位更新间隔时间，时间越短位置更新越快",
+  "minute": "{count}分钟",
+  "@minute": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "second": "{count}秒",
+  "@second": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "lightColor": "灯颜色",
+  "lightColorDesc": "设置灯颜色",
+  "flashMode": "闪烁",
+  "flashModeDesc": "设置灯闪烁频率",
+  "flashCount": "闪烁次数",
+  "flashCountDesc": "设置灯闪烁的次数，数值越大闪烁时间越长",
+  "colorRainbow": "七彩闪烁",
+  "colorRed": "红灯",
+  "colorOrange": "橙灯",
+  "colorYellow": "黄灯",
+  "colorGreen": "绿灯",
+  "flashBreathing": "呼吸灯",
+  "flashSlow": "慢闪",
+  "flashFast": "爆闪",
+  "times": "{count}次",
+  "@times": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepSwitch": "休眠开关",
+  "sleepSwitchDesc": "控制休眠开启和关闭",
+  "startTime": "开始时间",
+  "startTimeDesc": "休眠开始时间，到时间设备自动进入休眠模式",
+  "endTime": "结束时间",
+  "endTimeDesc": "休眠结束时间，到时间设备自动退出休眠模式",
+  "selectTime": "选择",
+  "deviceCheckTitle": "故障检测",
+  "startCheck": "开始",
+  "checkDesc": "点击开始故障检测，将帮助诊断潜在问题",
+  "currentVersion": "当前版本",
+  "versionUpToDate": "版本已是最新",
+  "petName": "宠物名称",
+  "petBreed": "品种",
+  "petGender": "性别",
+  "petBirthday": "生日",
+  "petWeight": "体重",
+  "petHeight": "身高",
+  "petLength": "体长",
+  "petNeutered": "绝育",
+  "petVaccination": "疫苗接种",
+  "confirm": "确认",
+  "skip": "跳过",
+  "selectHint": "选择",
+  "enterHint": "输入",
+  "save": "保存",
+  "male": "雄性",
+  "female": "雌性",
+  "yes": "是",
+  "no": "否",
+  "pleaseEnter": "请输入",
+  "vacNotVaccinated": "未接种",
+  "vacVaccinated": "已接种",
+  "vaccinationDate": "接种日期",
+  "forgotVaccinationTime": "若忘记疫苗接种的时间",
+  "yearSuffix": "年",
+  "monthSuffix": "月",
+  "daySuffix": "日",
+  "selectBreed": "选择品种",
+  "tabDog": "🐶 狗狗",
+  "tabCat": "🐱 猫咪",
+  "searchBreedHint": "搜索品种/别名/拼音",
+  "hotRecommendation": "🔥 热门推荐",
+  "allBreeds": "🗂 全部品种",
+  "searchEmptyHint": "未找到相关品种，您可以：",
+  "selectMixedBreed": "选择 混血/串串",
+  "selectUnknownBreed": "选择 未知品种",
+  "finish": "完成",
+  "activationSuccessGreeting1": "你好 ",
+  "activationSuccessGreeting2": "！你的设备已激活。",
+  "virtualPet": "虚拟宠物",
+  "newBadge": "新",
+  "addPet": "添加宠物",
+  "bluetoothPositioning": "蓝牙定位",
+  "minutesAgo": "{minutes}分钟前",
+  "@minutesAgo": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "today": "今天",
+  "goal": "目标",
+  "activity": "活动",
+  "minutes": "分钟",
+  "calories": "卡路里",
+  "kcal": "千卡",
+  "rest": "休息",
+  "hours": "小时",
+  "steps": "步数",
+  "trajectory": "轨迹",
+  "stayTime": "停留时间",
+  "geofence": "电子围栏",
+  "viewAll": "查看全部",
+  "noGeofenceCreated": "未创建地理围栏",
+  "createNew": "新建",
+  "light": "灯光",
+  "sound": "声音",
+  "findPet": "寻宠",
+  "gps": "GPS",
+  "now": "现在",
+  "homeTab": "主页",
+  "healthTab": "健康",
+  "petTab": "宠物",
+  "sun": "周日",
+  "mon": "周一",
+  "tue": "周二",
+  "wed": "周三",
+  "thu": "周四",
+  "fri": "周五",
+  "sat": "周六",
+  "progress": "进度",
+  "caloriesDesc": "卡路里根据您宠物的品种、年龄、体重和实时步数计算，提供最准确的实际能量消耗估算",
+  "selectAction": "选择",
+  "ageMonths": "{months}月",
+  "@ageMonths": {
+    "placeholders": {
+      "months": {
+        "type": "int"
+      }
+    }
+  },
+  "ageYears": "{years}岁",
+  "@ageYears": {
+    "placeholders": {
+      "years": {
+        "type": "int"
+      }
+    }
+  },
+  "ageYearsMonths": "{years}岁{months}月",
+  "@ageYearsMonths": {
+    "placeholders": {
+      "years": {
+        "type": "int"
+      },
+      "months": {
+        "type": "int"
+      }
+    }
+  }
 }

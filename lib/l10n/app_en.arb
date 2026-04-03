@@ -140,5 +140,201 @@
   "termsOfUse": "Terms of Use",
   "appVersion": "Version",
   "findImeiSnHint": "You can find the IMEI/SN on the back of the box or on the device",
-  "enterImeiSn": "Enter IMEI/SN"
+  "enterImeiSn": "Enter IMEI/SN",
+  "deviceName": "Device Name",
+  "shareDeviceTitle": "Share Device",
+  "noSharedMembers": "No shared members",
+  "sharedMembersCanView": "Shared members can view the device",
+  "addSharedMember": "Add shared member",
+  "alertSettingsTitle": "Alert Settings",
+  "stopCharging": "Stop Charging",
+  "startCharging": "Start Charging",
+  "outOfFenceAlert": "Out of fence alert (Bluetooth)",
+  "inFenceAlert": "In fence alert (Bluetooth)",
+  "stopMoving": "Stop moving",
+  "startMoving": "Start moving",
+  "enterFence": "Enter fence",
+  "leaveFence": "Leave fence",
+  "devicePowerOn": "Device powered on",
+  "bluetoothConnected": "Bluetooth connected",
+  "bluetoothDisconnected": "Bluetooth disconnected",
+  "devicePowerOff": "Device powered off",
+  "deviceActivated": "Device activated",
+  "deviceSettingsTitle": "Device Settings",
+  "findPetMode": "Find Pet Mode Settings",
+  "findPetModeDesc": "Location updates faster in Find Pet Mode to help you quickly find your pet, battery life will be shortened accordingly",
+  "soundSettings": "Sound Settings",
+  "soundSettingsDesc": "Device sound settings",
+  "timesSuffix": "times",
+  "lightSettings": "Light Settings",
+  "lightSettingsDesc": "Set light parameters",
+  "powerSavingMode": "Power Saving Mode",
+  "sleepSettings": "Sleep Settings",
+  "sleepSettingsDesc": "When enabled, the device enters sleep mode during the set time range. The device is offline during sleep, and device activity will automatically exit sleep mode.",
+  "deviceSelfTest": "Device Self-test",
+  "bluetoothFirmwareUpgrade": "Bluetooth Firmware Upgrade",
+  "duration": "Duration",
+  "durationDesc": "Find Pet Mode duration, automatically exits after time is up",
+  "updateInterval": "Update Interval",
+  "updateIntervalDesc": "Location update interval, shorter time means faster updates",
+  "minute": "{count} min",
+  "@minute": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "second": "{count} sec",
+  "@second": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "lightColor": "Light Color",
+  "lightColorDesc": "Set light color",
+  "flashMode": "Flash Mode",
+  "flashModeDesc": "Set light flash frequency",
+  "flashCount": "Flash Count",
+  "flashCountDesc": "Set the number of times the light flashes, the larger the value, the longer the flashing time",
+  "colorRainbow": "Rainbow Flashing",
+  "colorRed": "Red Light",
+  "colorOrange": "Orange Light",
+  "colorYellow": "Yellow Light",
+  "colorGreen": "Green Light",
+  "flashBreathing": "Breathing",
+  "flashSlow": "Slow Flash",
+  "flashFast": "Burst Flash",
+  "times": "{count} times",
+  "@times": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepSwitch": "Sleep Switch",
+  "sleepSwitchDesc": "Control sleep mode on and off",
+  "startTime": "Start Time",
+  "startTimeDesc": "Sleep start time, device will automatically enter sleep mode at this time",
+  "endTime": "End Time",
+  "endTimeDesc": "Sleep end time, device will automatically exit sleep mode at this time",
+  "selectTime": "Select",
+  "deviceCheckTitle": "Device Self-test",
+  "startCheck": "Start",
+  "checkDesc": "Click start to run device self-test, which helps diagnose potential issues",
+  "currentVersion": "Current Version",
+  "versionUpToDate": "Version is up to date",
+  "petName": "Pet Name",
+  "petBreed": "Breed",
+  "petGender": "Gender",
+  "petBirthday": "Birthday",
+  "petWeight": "Weight",
+  "petHeight": "Height",
+  "petLength": "Length",
+  "petNeutered": "Neutered",
+  "petVaccination": "Vaccination",
+  "confirm": "Confirm",
+  "skip": "Skip",
+  "selectHint": "Select",
+  "enterHint": "Enter",
+  "save": "Save",
+  "male": "Male",
+  "female": "Female",
+  "yes": "Yes",
+  "no": "No",
+  "pleaseEnter": "Please enter",
+  "vacNotVaccinated": "Not Vaccinated",
+  "vacVaccinated": "Vaccinated",
+  "vaccinationDate": "Vaccination Date",
+  "forgotVaccinationTime": "Forgot vaccination time?",
+  "yearSuffix": "",
+  "monthSuffix": "",
+  "daySuffix": "",
+  "selectBreed": "Select Breed",
+  "tabDog": "🐶 Dog",
+  "tabCat": "🐱 Cat",
+  "searchBreedHint": "Search breed/alias/pinyin",
+  "hotRecommendation": "🔥 Hot Recommendation",
+  "allBreeds": "🗂 All Breeds",
+  "searchEmptyHint": "No matching breed found, you can:",
+  "selectMixedBreed": "Select Mixed Breed",
+  "selectUnknownBreed": "Select Unknown Breed",
+  "finish": "Finish",
+  "activationSuccessGreeting1": "Hello ",
+  "activationSuccessGreeting2": "! Your device is activated.",
+  "virtualPet": "Virtual Pet",
+  "newBadge": "New",
+  "addPet": "Add Pet",
+  "bluetoothPositioning": "Bluetooth Positioning",
+  "minutesAgo": "{minutes} mins ago",
+  "@minutesAgo": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "today": "Today",
+  "goal": "Goal",
+  "activity": "Activity",
+  "minutes": "mins",
+  "calories": "Calories",
+  "kcal": "kcal",
+  "rest": "Rest",
+  "hours": "h",
+  "steps": "Steps",
+  "trajectory": "Trajectory",
+  "stayTime": "Stay time",
+  "geofence": "Geofence",
+  "viewAll": "View all",
+  "noGeofenceCreated": "No geofence created",
+  "createNew": "Create new",
+  "light": "Light",
+  "sound": "Sound",
+  "findPet": "Find Pet",
+  "gps": "GPS",
+  "now": "Now",
+  "homeTab": "Home",
+  "healthTab": "Health",
+  "petTab": "Pet",
+  "sun": "Sun",
+  "mon": "Mon",
+  "tue": "Tue",
+  "wed": "Wed",
+  "thu": "Thu",
+  "fri": "Fri",
+  "sat": "Sat",
+  "progress": "Progress",
+  "caloriesDesc": "Calories are calculated based on your pet's breed, age, weight, and real-time steps to provide the most accurate estimate of actual energy expenditure.",
+  "selectAction": "Select",
+  "ageMonths": "{months} mo",
+  "@ageMonths": {
+    "placeholders": {
+      "months": {
+        "type": "int"
+      }
+    }
+  },
+  "ageYears": "{years} yr",
+  "@ageYears": {
+    "placeholders": {
+      "years": {
+        "type": "int"
+      }
+    }
+  },
+  "ageYearsMonths": "{years}y {months}m",
+  "@ageYearsMonths": {
+    "placeholders": {
+      "years": {
+        "type": "int"
+      },
+      "months": {
+        "type": "int"
+      }
+    }
+  }
 }
